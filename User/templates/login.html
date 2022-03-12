@@ -1,0 +1,18 @@
+{% extends 'basic.html' %}
+
+{% block title%} Login {% endblock %}
+
+{% block body%}
+<center><br/>
+<h1>LogIn</h1>
+
+<form action=" " method=POST>
+    {% csrf_token %} 
+    {{l_form.as_p}}
+  
+    <input type="submit" class="btn btn-primary" / >
+</form>
+
+
+
+{% endblock %}

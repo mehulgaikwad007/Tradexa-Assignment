@@ -1,0 +1,33 @@
+Assignment Question:
+
+ Create an application that has two apps.
+ 1. A user with the user and Post model 
+ 
+ User: first_name, last_name, email, password, username 
+ Post: user, text, created_at, updated_at Foreign key relationship exists between the User and Post on Model level, not on Database level.
+
+2. Products app with Product model. 
+
+Product: name, weight, price, created_at, updated_at Both of the apps should use two different databases. 
+
+Create a form that an authenticated user can use to create a post.
+
+ Note:
+1. Register all models on the admin dashboard.
+
+----------------------------------------------------------------------------------
+#Requirement:
+
+pip install psycopg2 
+--------------------------------------------------------------------------------------------
+#Credentials
+
+http://127.0.0.1:8000/admin/
+
+U - mehul@gmail.com
+P - mehul
+
+login 
+
+U - mehulgaikwad2001@gmail.com
+P - mehul

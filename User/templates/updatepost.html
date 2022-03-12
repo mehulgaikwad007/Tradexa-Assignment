@@ -1,0 +1,30 @@
+{% extends 'basic.html' %}
+
+{% block title%} update Post {% endblock %}
+
+{% block body%}
+<br/>
+
+<center>
+<h1 > Update  Post </h1>
+
+<br/><br/>
+<form action=" " method=POST>
+ {% csrf_token %} 
+
+   {% for p in post %}
+   <p>
+      <textarea name="text" placeholder="Enter text"  id="text" class="form-control "  >
+         {{p.text}}
+      </textarea>
+   </p>
+{% endfor %}
+  
+   <input type="submit" class="btn btn-primary" value="Update Post" / >
+
+</form>
+</center>
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'basic.html' %}
+
+{% block title%} Create Post {% endblock %}
+
+{% block body%}
+  <br/>
+  <h1 style="margin-left:20%;"> Your  Post 
+
+    <a href="/create" ><button class="btn btn-primary " name="createpost" id="createpost" style="margin-left:48%;" >Create Post
+    </button>
+    </a>
+  </h1>
+
+  <br/><br/>
+
+
+    
+  {% for p in post_all %}
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-9">
+            <p class="card-text" >
+              {{p.text}}
+            </p>
+          </div>
+          <div class="col-2">
+            <a href="/post/update/{{p.id}}" class="btn btn-primary " style="margin-left:81%"> Update</a>
+          </div>
+
+          <p class="card-text " style="font-size:12px; font-weight:bold;">Created_at  : {{p.created_at}}<br/>
+              Updated_at : {{p.updated_at}}</p>
+        </div>
+      </div>
+    </div>
+  </br>
+  {% endfor %}
+
+
+{% endblock %}
